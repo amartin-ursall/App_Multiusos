@@ -10,7 +10,7 @@ El estado actual del proyecto es una **aplicación shell completa y funcional**.
 El siguiente paso es reemplazar los mocks y las simulaciones con lógica de negocio real.
 ## 2. Arquitectura General
 - **Frontend**: React (Vite), TypeScript, Tailwind CSS, shadcn/ui, Zustand, React Router.
-- **Backend**: Cloudflare Workers con Hono.
+- **Backend**: Recomendacion.
 - **Comunicación**: API REST a través de endpoints en `/api/*`.
 ### Flujo de Trabajo General para una Herramienta
 1.  **Frontend (UI)**: El usuario interactúa con la UI (ej. sube un archivo, selecciona opciones).

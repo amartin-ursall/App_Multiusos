@@ -5,8 +5,9 @@ interface PageThumbnailProps {
   pageNumber: number;
   isSelected: boolean;
   onToggle: (pageNumber: number) => void;
+  previewUrl?: string;
 }
-export function PageThumbnail({ pageNumber, isSelected, onToggle }: PageThumbnailProps) {
+export function PageThumbnail({ pageNumber, isSelected, onToggle, previewUrl }: PageThumbnailProps) {
   return (
     <div
       className="relative cursor-pointer"
@@ -26,7 +27,15 @@ export function PageThumbnail({ pageNumber, isSelected, onToggle }: PageThumbnai
       >
         <CardContent className="flex aspect-[3/4] flex-col items-center justify-center p-2">
           <div className="flex h-full w-full items-center justify-center rounded-sm bg-muted">
-            <span className="text-2xl font-bold text-muted-foreground">{pageNumber}</span>
+            {previewUrl ? (
+              <img 
+                src={previewUrl} 
+                alt={`Página ${pageNumber}`} 
+                className="h-full w-full object-contain"
+              />
+            ) : (
+              <span className="text-2xl font-bold text-muted-foreground">{pageNumber}</span>
+            )}
           </div>
         </CardContent>
       </Card>
