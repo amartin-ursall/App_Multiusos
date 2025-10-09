@@ -39,6 +39,7 @@ import {
   Shrink,
   FileImage,
   Home,
+  Globe,
 } from 'lucide-react';
 export type Module = {
   name: string;
@@ -123,9 +124,10 @@ export const IMAGE_TOOLS: FeatureTool[] = [
 ];
 export const TEMPLATE_TOOLS: FeatureTool[] = [
   { title: 'Crear Plantilla', description: 'Construye una nueva plantilla reutilizable.', Icon: PlusSquare, path: '/plantillas/crear' },
-  { title: 'Explorar Galer����a', description: 'Explora una biblioteca de plantillas pre-hechas.', Icon: GalleryVertical, path: '/plantillas/explorar' },
+  { title: 'Explorar Galería', description: 'Explora una biblioteca de plantillas pre-hechas.', Icon: GalleryVertical, path: '/plantillas/explorar' },
   { title: 'Mis Plantillas', description: 'Accede y gestiona tus plantillas guardadas.', Icon: Folder, path: '/plantillas/mis-plantillas' },
   { title: 'Editar Plantilla', description: 'Modifica y actualiza plantillas existentes.', Icon: FileEdit, path: '/plantillas/crear' },
+  { title: 'Cargar Aplicación', description: 'Carga aplicaciones externas en tus plantillas.', Icon: Globe, path: '/plantillas/cargar-app' },
 ];
 export const CONNECTOR_TOOLS: FeatureTool[] = [
   { title: 'Nueva Conexión', description: 'Conéctate a una nueva fuente de datos o API.', Icon: Plug, path: '/conector/nueva' },

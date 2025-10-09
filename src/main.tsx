@@ -31,6 +31,7 @@ import { ImageConvertToJpgPage } from '@/pages/tools/ImageConvertToJpgPage';
 import { TemplateGalleryPage } from '@/pages/tools/TemplateGalleryPage';
 import { TemplateManagePage } from '@/pages/tools/TemplateManagePage';
 import { TemplateBuilderPage } from '@/pages/tools/TemplateBuilderPage';
+import ExternalAppLoaderPage from '@/pages/modules/templates/ExternalAppLoaderPage';
 import { ConnectorNewPage } from '@/pages/tools/ConnectorNewPage';
 import { ConnectorManagePage } from '@/pages/tools/ConnectorManagePage';
 import { ConnectorSyncPage } from '@/pages/tools/ConnectorSyncPage';
@@ -67,9 +68,10 @@ const router = createBrowserRouter([
       { path: "/imagenes/convertir-gif", element: <ImageConvertToGifPage /> },
       { path: "/imagenes/eliminar-fondo", element: <ImageRemoveBackgroundPage /> },
       { path: "/plantillas", element: <TemplatesPage /> },
+      { path: "/plantillas/crear", element: <TemplateBuilderPage /> },
       { path: "/plantillas/explorar", element: <TemplateGalleryPage /> },
       { path: "/plantillas/mis-plantillas", element: <TemplateManagePage /> },
-      { path: "/plantillas/crear", element: <TemplateBuilderPage /> },
+      { path: "/plantillas/cargar-app", element: <ExternalAppLoaderPage /> },
       { path: "/conector", element: <ConnectorPage /> },
       { path: "/conector/nueva", element: <ConnectorNewPage /> },
       { path: "/conector/gestionar", element: <ConnectorManagePage /> },
