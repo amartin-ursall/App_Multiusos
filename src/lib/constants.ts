@@ -103,6 +103,12 @@ export const MODULES: Module[] = [
     description: 'Dashboard de Asana integrado vía iframe.',
     Icon: Activity,
   },
+  {
+    name: 'Datos Sensibles',
+    path: '/sensibles',
+    description: 'Herramientas para tratamiento y redacción de datos sensibles.',
+    Icon: ShieldOff,
+  },
 ];
 export type FeatureTool = {
   title: string;
@@ -118,7 +124,6 @@ export const PDF_TOOLS: FeatureTool[] = [
   { title: 'PDF a PowerPoint', description: 'Convierte tu PDF en una presentación.', Icon: Presentation, path: '/pdf/a-powerpoint' },
   { title: 'PDF a Excel', description: 'Convierte tablas de PDF a hojas de cálculo.', Icon: FileSpreadsheet, path: '/pdf/a-excel' },
   { title: 'Firmar PDF', description: 'Añade tu firma a un documento.', Icon: PenSquare, path: '/pdf/firmar' },
-  { title: 'Redactar PDF', description: 'Elimina datos sensibles permanentemente.', Icon: ShieldOff, path: '/pdf/redactar' },
 ];
 export const IMAGE_TOOLS: FeatureTool[] = [
   { title: 'Comprimir Img', description: 'Reduce el tamaño del archivo de tus imágenes.', Icon: Shrink, path: '/imagenes/comprimir' },
@@ -152,4 +157,9 @@ export const DOCUMENT_TOOLS: FeatureTool[] = [
   { title: 'Comparar Documentos', description: 'Encuentra diferencias entre dos documentos.', Icon: GitCompareArrows, path: '/documentos/comparar' },
   { title: 'Firma Electrónica', description: 'Solicita y añade firmas electrónicas.', Icon: PenSquare, path: '/documentos/firma-electronica' },
   { title: 'Proteger Documento', description: 'Cifra y protege archivos con contraseña.', Icon: Lock, path: '/documentos/proteger' },
+];
+
+// Herramientas para el módulo de Datos Sensibles
+export const SENSITIVE_TOOLS: FeatureTool[] = [
+  { title: 'Redactar PDF', description: 'Elimina datos sensibles permanentemente.', Icon: ShieldOff, path: '/pdf/redactar' },
 ];

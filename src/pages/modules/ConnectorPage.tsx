@@ -1,9 +1,7 @@
-import { FeatureCard } from '@/components/FeatureCard';
-import { MODULES, CONNECTOR_TOOLS } from '@/lib/constants';
+import { MODULES } from '@/lib/constants';
 import { motion } from 'framer-motion';
 import { containerVariants, headerVariants } from '@/lib/animations';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Construction } from 'lucide-react';
+import { ExternalAppFrame } from '@/components/templates/ExternalAppFrame';
 
 export function ConnectorPage() {
   const moduleInfo = MODULES.find((m) => m.path === '/conector');
@@ -21,15 +19,11 @@ export function ConnectorPage() {
         <p className="text-muted-foreground">{moduleInfo.description}</p>
       </motion.div>
 
-      {/* Alerta de módulo en desarrollo */}
-      <Alert className="border-amber-500/50 bg-amber-500/10">
-        <Construction className="h-4 w-4 text-amber-500" />
-        <AlertTitle className="text-amber-700 dark:text-amber-400">Módulo en Desarrollo</AlertTitle>
-        <AlertDescription className="text-amber-600 dark:text-amber-300">
-          Este módulo está actualmente en desarrollo. Las funcionalidades de integración con APIs externas
-          (Google Drive, Salesforce, Dropbox, SharePoint) estarán disponibles próximamente.
-        </AlertDescription>
-      </Alert>
+      {/* Contenido del Conector: iframe integrado */}
+
+      <div className="rounded-md border border-border/40">
+        <ExternalAppFrame height="70vh" allowUrlChange={false} defaultUrl="http://localhost:3034/" />
+      </div>
 
       {/*
         TODO: MÓDULO CONECTOR - EN DESARROLLO
@@ -53,11 +47,7 @@ export function ConnectorPage() {
         - Cron: node-cron para sincronización programada
       */}
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 opacity-50 pointer-events-none">
-        {CONNECTOR_TOOLS.map((tool) => (
-          <FeatureCard key={tool.title} tool={tool} />
-        ))}
-      </div>
+      {/* Se han removido las cards de herramientas para mostrar solo el iframe */}
     </motion.div>
   );
 }

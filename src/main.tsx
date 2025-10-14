@@ -45,6 +45,7 @@ import { PdfRedactPage } from '@/pages/tools/PdfRedactPage';
 import { ImageRemoveBackgroundPage } from '@/pages/tools/ImageRemoveBackgroundPage';
 import { ImageConvertToGifPage } from '@/pages/tools/ImageConvertToGifPage';
 import { ConnectorWebhooksPage } from '@/pages/tools/ConnectorWebhooksPage';
+import SensitivePage from '@/pages/modules/SensitivePage';
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -74,6 +75,7 @@ const router = createBrowserRouter([
       { path: "/plantillas/mis-plantillas", element: <TemplateManagePage /> },
       { path: "/plantillas/cargar-app", element: <ExternalAppLoaderPage /> },
       { path: "/asana", element: <AsanaPage /> },
+      { path: "/sensibles", element: <SensitivePage /> },
       { path: "/conector", element: <ConnectorPage /> },
       { path: "/conector/nueva", element: <ConnectorNewPage /> },
       { path: "/conector/gestionar", element: <ConnectorManagePage /> },
