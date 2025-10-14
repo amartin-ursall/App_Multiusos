@@ -97,6 +97,12 @@ export const MODULES: Module[] = [
     description: 'Una vista para gestionar la configuración de la organización.',
     Icon: Users,
   },
+  {
+    name: 'Asana',
+    path: '/asana',
+    description: 'Dashboard de Asana integrado vía iframe.',
+    Icon: Activity,
+  },
 ];
 export type FeatureTool = {
   title: string;
